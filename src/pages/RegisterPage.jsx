@@ -1,5 +1,3 @@
-
-// RegisterPage.jsx
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Heading from "../components/Heading";

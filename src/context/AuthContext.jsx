@@ -1,4 +1,3 @@
-// AuthContext.jsx
 import React, { createContext, useState, useEffect, useContext } from "react";
 import toast from "react-hot-toast";
 
@@ -16,7 +15,6 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Check if user is logged in on app startup
   useEffect(() => {
     const checkAuthStatus = () => {
       try {
@@ -38,7 +36,6 @@ export const AuthProvider = ({ children }) => {
   // Register function
   const register = async (userData) => {
     try {
-      // Check if user already exists
       const existingUsers = JSON.parse(localStorage.getItem('popx_users') || '[]');
       const userExists = existingUsers.find(u => u.email === userData.email);
       
@@ -47,7 +44,6 @@ export const AuthProvider = ({ children }) => {
         return false;
       }
 
-      // Add new user to users array
       const newUser = {
         ...userData,
         id: Date.now().toString(),
@@ -77,7 +73,6 @@ export const AuthProvider = ({ children }) => {
         return false;
       }
 
-      // Set current user
       localStorage.setItem('popx_user', JSON.stringify(user));
       setUser(user);
       toast.success('Login successful!');

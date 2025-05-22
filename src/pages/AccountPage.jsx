@@ -1,6 +1,4 @@
-
-// AccountPage.jsx
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import profile from "../assets/profile.png";
@@ -16,7 +14,7 @@ function AccountPage() {
   };
 
   // Redirect if not authenticated
-  React.useEffect(() => {
+  useEffect(() => {
     if (!user) {
       navigate('/login');
     }
@@ -83,8 +81,6 @@ function AccountPage() {
 
               {/* User Details */}
               <div className="space-y-4">
-                
-                
                 <p className="text-sm text-gray-600 leading-relaxed">
                   Welcome to PopX! Your account has been successfully created and 
                   you can now access all features of our platform. Thank you for 

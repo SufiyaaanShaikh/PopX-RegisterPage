@@ -95,7 +95,7 @@ function LoginPage() {
                     className="bg-[#6C25FF] rounded-md text-white text-base leading-[17px] font-medium w-full h-[46px] cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#5A1EDB] !mt-6 disabled:opacity-50 disabled:cursor-not-allowed"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? "Signing In..." : "Sign In"}
+                    {isSubmitting ? "Loginin In..." : "Login"}
                   </button>
 
                   <div className="text-center mt-4">

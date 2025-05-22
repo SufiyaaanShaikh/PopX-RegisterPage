@@ -84,7 +84,7 @@ function RegisterPage() {
                     <ErrorMessage
                       name="name"
                       component="div"
-                      className="text-red-500 text-sm mt-1"
+                      className="text-red-500 text-xs mt-1"
                     />
                   </div>
 
@@ -101,7 +101,7 @@ function RegisterPage() {
                     <ErrorMessage
                       name="phone"
                       component="div"
-                      className="text-red-500 text-sm mt-1"
+                      className="text-red-500 text-xs mt-1"
                     />
                   </div>
 
@@ -118,7 +118,7 @@ function RegisterPage() {
                     <ErrorMessage
                       name="email"
                       component="div"
-                      className="text-red-500 text-sm mt-1"
+                      className="text-red-500 text-xs mt-1"
                     />
                   </div>
 
@@ -135,7 +135,7 @@ function RegisterPage() {
                     <ErrorMessage
                       name="password"
                       component="div"
-                      className="text-red-500 text-sm mt-1"
+                      className="text-red-500 text-xs mt-1"
                     />
                   </div>
 
@@ -152,7 +152,7 @@ function RegisterPage() {
                     <ErrorMessage
                       name="companyName"
                       component="div"
-                      className="text-red-500 text-sm mt-1"
+                      className="text-red-500 text-xs mt-1"
                     />
                   </div>
 

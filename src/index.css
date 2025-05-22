@@ -32,7 +32,7 @@ body {
   display: flex;
   flex-direction: column;
   position: static;
-  height: 4.4em;
+  height: 4em;
 }
 
 .coolinput label.text {

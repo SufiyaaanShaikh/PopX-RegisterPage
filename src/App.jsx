@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import './index.css';
 
-import WelcomePage from './pages/WelcomePage';
-import LoginPage from './pages/LoginPage';
-import RegisterPage from './pages/RegisterPage';
-import AccountPage from './pages/AccountPage';
+const WelcomePage = lazy(() => import('./pages/WelcomePage'));
+const LoginPage = lazy(() => import('./pages/LoginPage'));
+const RegisterPage = lazy(() => import('./pages/RegisterPage'));
+const AccountPage = lazy(() => import('./pages/AccountPage'));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
 import { AuthProvider, useAuth } from './context/AuthContext';
-import NotFoundPage from './pages/NotFoundPage';
 
 // Protected Route Component
 function ProtectedRoute({ children }) {
@@ -54,7 +54,7 @@ function AppRoutes() {
           path="/login" 
           element={
             <PublicRoute>
-              <LoginPage />
+              <LoginPage loading="lazy"/>
             </PublicRoute>
           } 
         />
@@ -62,7 +62,7 @@ function AppRoutes() {
           path="/register" 
           element={
             <PublicRoute>
-              <RegisterPage />
+              <RegisterPage loading="lazy"/>
             </PublicRoute>
           } 
         />
@@ -70,11 +70,11 @@ function AppRoutes() {
           path="/account" 
           element={
             <ProtectedRoute>
-              <AccountPage />
+              <AccountPage loading="lazy"/>
             </ProtectedRoute>
           } 
         />
-        <Route path="*" element={<NotFoundPage />} />
+        <Route path="*" element={<NotFoundPage loading="lazy"/>} />
       </Routes>
       <Toaster 
         position="top-center"

@@ -56,11 +56,13 @@ function AccountPage() {
               <div className="flex items-start gap-4 text-[#1D2226]">
                 <div className="relative">
                   <img 
+                  loading="lazy"
                     src={profile} 
                     alt="Profile photo" 
                     className="w-16 h-16 rounded-full object-cover"
                   />
                   <img
+                  loading="lazy"
                     src={camera}
                     alt="Edit profile"
                     className="absolute -bottom-1 -right-1 w-6 h-6 cursor-pointer hover:opacity-80 transition-opacity"

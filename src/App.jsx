@@ -9,6 +9,7 @@ import RegisterPage from './pages/RegisterPage';
 import AccountPage from './pages/AccountPage';
 
 import { AuthProvider, useAuth } from './context/AuthContext';
+import NotFoundPage from './pages/NotFoundPage';
 
 // Protected Route Component
 function ProtectedRoute({ children }) {
@@ -73,7 +74,7 @@ function AppRoutes() {
             </ProtectedRoute>
           } 
         />
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Toaster 
         position="top-center"
